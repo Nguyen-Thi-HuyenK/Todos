@@ -32,7 +32,7 @@ class Todos {
             this.tasks.push(task)
             return task
     }
-    #removeFromArray(id: number): void { //Part 5
+    #removeFromArray(id: number): void { 
         const arrayWithoutRemoved = this.tasks.filter(task => task.id !== id)
         this.tasks = arrayWithoutRemoved
     }
@@ -56,7 +56,7 @@ class Todos {
         })
     }
 
-removeTask = (id: number) => { //Part 5
+removeTask = (id: number) => { 
     return new Promise(async (resolve, reject) => {
         fetch(this.#backend_url + '/delete/' + id,{
         method: 'delete'
